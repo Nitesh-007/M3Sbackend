@@ -39,7 +39,7 @@ def add_employee():
             return jsonify(response), 409
        
         auto_generated_password = generate_password()
-        print(auto_generated_password)
+        print("user_password",auto_generated_password)
         encoded_password = base64.b64encode(auto_generated_password.encode('utf-8')).decode('utf-8')
         employee_data["password"] = encoded_password
         employee_data["otp"] = ""

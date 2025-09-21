@@ -33,13 +33,13 @@ def create_app():
     app.register_blueprint(AdminDeshboard,url_prefix='/')
     app.register_blueprint(AdminTaskData,url_prefix='/')
     app.register_blueprint(Auth,url_prefix='/')
-    app.register_blueprint(allmentee,url_prifix='/')
-    app.register_blueprint(allmentor,url_prifix='/')
-    app.register_blueprint(location,url_prifix='/')
-    app.register_blueprint(Bu,url_prifix='/')
-    app.register_blueprint(designation,url_prifix='/')
-    app.register_blueprint(techgroup,url_prifix='/')
-    app.register_blueprint(Empdata,url_prifix='/')
+    app.register_blueprint(allmentee,url_prefix='/')
+    app.register_blueprint(allmentor,url_prefix='/')
+    app.register_blueprint(location,url_prefix='/')
+    app.register_blueprint(Bu,url_prefix='/')
+    app.register_blueprint(designation,url_prefix='/')
+    app.register_blueprint(techgroup,url_prefix='/')
+    app.register_blueprint(Empdata,url_prefix='/')
 
 
     return app
