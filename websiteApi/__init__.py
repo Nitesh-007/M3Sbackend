@@ -5,6 +5,7 @@ from os import path
 from flask import Flask
 from flask_pymongo import PyMongo
 from flask_cors import CORS
+import os
 
 mongo = PyMongo()
 
@@ -13,7 +14,7 @@ def create_app():
     # mongo.init_app(app)
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'anhsgret'
-    app.config['MONGO_URI'] = 'mongodb://localhost:27017/m3sproject'
+    app.config['MONGO_URI'] = os.environ.get('MONGO_URI')
     mongo = PyMongo(app)
     CORS(app)
 
