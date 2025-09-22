@@ -14,7 +14,7 @@ def create_app():
     # mongo.init_app(app)
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'anhsgret'
-    app.config['MONGO_URI'] = os.environ.get('mongodb+srv://Rudranshi:Rudranshi247301@m3sdata.zoymxao.mongodb.net/?retryWrites=true&w=majority&appName=M3sdata')
+    app.config['MONGO_URI'] = os.environ.get('MONGO_URI')
     mongo = PyMongo(app)
     CORS(app)
 
