@@ -46,7 +46,7 @@ def login():
 
         # Check if user exists and password is correct
         employees_collection=mongo.db['Empdata']
-        print("This data is from database"+employees_collection)
+        # print("This data is from database"+employees_collection)
         
         user = employees_collection.find_one({"email": {"$regex": '^' + email + '$', "$options": "i"}})
         print("user data",user)
