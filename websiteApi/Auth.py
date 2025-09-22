@@ -45,7 +45,8 @@ def login():
             return jsonify({'message': 'Email and password are required'}), 400
 
         # Check if user exists and password is correct
-        employees_collection=mongo.db['Empdata']
+        employees_collection=mongo.db['m3sproject.Empdata
+']
         print(employees_collection)
         
         user = employees_collection.find_one({"email": {"$regex": '^' + email + '$', "$options": "i"}})
